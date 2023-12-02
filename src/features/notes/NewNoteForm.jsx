@@ -51,7 +51,7 @@ const NewNoteForm = ({ users }) => {
 
   const content = (
     <>
-      <p className={errClass}>{error?.error}</p>
+      <p className={errClass}>{error?.data}</p>
 
       <form className="form" onSubmit={onSaveNoteClicked}>
         <div className="form__title-row">
