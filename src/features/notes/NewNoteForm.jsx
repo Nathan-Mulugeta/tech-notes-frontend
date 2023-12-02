@@ -51,7 +51,7 @@ const NewNoteForm = ({ users }) => {
 
   const content = (
     <>
-      <p className={errClass}>{error?.data}</p>
+      <p className={errClass}>{error?.data?.message}</p>
 
       <form className="form" onSubmit={onSaveNoteClicked}>
         <div className="form__title-row">
@@ -105,7 +105,7 @@ const NewNoteForm = ({ users }) => {
     </>
   );
 
-  return !isLoading ? content : <p>Loading...</p>;
+  return content;
 };
 
 export default NewNoteForm;
